@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/d31ad909-88ee-4659-baf3-ec1f008c3249/AppServices/subscriptions/d31ad909-88ee-4659-baf3-ec1f008c3249/resourceGroups/web-app-lab/providers/Microsoft.Web/sites/codecompilor",
+    "appService.deploySubpath": "."
+}
