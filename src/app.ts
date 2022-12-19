@@ -8,7 +8,9 @@ app.use(express.json());
 
 app.use(cors());
 app.use(morgan("dev"));
-
+app.get("/", (req: Request, res: Response) => {
+  res.send("Hello World!");
+});
 app.post("/compileAndRun", async (req: Request, res: Response) => {
   const { code, language } = req.body;
   try {

@@ -21,6 +21,9 @@ const port = 5000;
 app.use(express_1.default.json());
 app.use((0, cors_1.default)());
 app.use((0, morgan_1.default)("dev"));
+app.get("/", (req, res) => {
+    res.send("Hello World!");
+});
 app.post("/compileAndRun", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const { code, language } = req.body;
     try {
