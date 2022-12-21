@@ -27,7 +27,7 @@ export const compileAndExecuteJavascript = () => {
 
 export const compileAndExecutePython = () => {
     return new Promise((resolve, reject) => {
-        exec("python ./src/bootcode", (err, stdout, stderr) => {
+        exec("python3 ./src/bootcode", (err, stdout, stderr) => {
             if (err) {
                 reject(err.message);
                 return;

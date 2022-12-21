@@ -29,7 +29,7 @@ const compileAndExecuteJavascript = () => {
 exports.compileAndExecuteJavascript = compileAndExecuteJavascript;
 const compileAndExecutePython = () => {
     return new Promise((resolve, reject) => {
-        (0, child_process_1.exec)("python ./src/bootcode", (err, stdout, stderr) => {
+        (0, child_process_1.exec)("python3 ./src/bootcode", (err, stdout, stderr) => {
             if (err) {
                 reject(err.message);
                 return;

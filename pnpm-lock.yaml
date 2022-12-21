@@ -1,17 +1,23 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@types/cors': ^2.8.13
   '@types/express': ^4.17.1
   '@typescript-eslint/eslint-plugin': ^5.42.0
   '@typescript-eslint/parser': ^5.42.0
+  cors: ^2.8.5
   eslint: ^8.26.0
-  express: ^4.17.1
+  express: ^4.18.2
+  morgan: ^1.10.0
   typescript: ^4.8.4
 
 dependencies:
+  cors: 2.8.5
   express: 4.18.2
+  morgan: 1.10.0
 
 devDependencies:
+  '@types/cors': 2.8.13
   '@types/express': 4.17.14
   '@typescript-eslint/eslint-plugin': 5.42.0_6xw5wg2354iw4zujk2f3vyfrzu
   '@typescript-eslint/parser': 5.42.0_wyqvi574yv7oiwfeinomdzmc3m
@@ -87,6 +93,12 @@ packages:
 
   /@types/connect/3.4.35:
     resolution: {integrity: sha1-X89q5EXkAh0fwiGaSHPMc6O7KtE=}
+    dependencies:
+      '@types/node': 18.11.9
+    dev: true
+
+  /@types/cors/2.8.13:
+    resolution: {integrity: sha1-uK3iK6RVobjLO10/NZEP0gT4T5Q=}
     dependencies:
       '@types/node': 18.11.9
     dev: true
@@ -328,6 +340,13 @@ packages:
     resolution: {integrity: sha1-6D46fj8wCzTLnYf2FfoMvzV2kO4=}
     dev: true
 
+  /basic-auth/2.0.1:
+    resolution: {integrity: sha1-uZgnm/R844NEtPPPkW1Gebv1Hjo=}
+    engines: {node: '>= 0.8'}
+    dependencies:
+      safe-buffer: 5.1.2
+    dev: false
+
   /body-parser/1.20.1:
     resolution: {integrity: sha1-sYEqiRLBlc03Gj7l5m+qIzilxmg=}
     engines: {node: '>= 0.8', npm: 1.2.8000 || >= 1.4.16}
@@ -421,6 +440,14 @@ packages:
   /cookie/0.5.0:
     resolution: {integrity: sha1-0fXXGt7GVYxY84mYfDZqpH6ZT4s=}
     engines: {node: '>= 0.6'}
+    dev: false
+
+  /cors/2.8.5:
+    resolution: {integrity: sha1-6sEdpRWS3Ya58G9uesKTs9+HXSk=}
+    engines: {node: '>= 0.10'}
+    dependencies:
+      object-assign: 4.1.1
+      vary: 1.1.2
     dev: false
 
   /cross-spawn/7.0.3:
@@ -1009,6 +1036,19 @@ packages:
       brace-expansion: 1.1.11
     dev: true
 
+  /morgan/1.10.0:
+    resolution: {integrity: sha1-CRd4q8H8R801CYJGU9rh+qtrF9c=}
+    engines: {node: '>= 0.8.0'}
+    dependencies:
+      basic-auth: 2.0.1
+      debug: 2.6.9
+      depd: 2.0.0
+      on-finished: 2.3.0
+      on-headers: 1.0.2
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
+
   /ms/2.0.0:
     resolution: {integrity: sha1-VgiurfwAvmwpAd9fmGF4jeDVl8g=}
     dev: false
@@ -1034,8 +1074,20 @@ packages:
     engines: {node: '>= 0.6'}
     dev: false
 
+  /object-assign/4.1.1:
+    resolution: {integrity: sha1-IQmtx5ZYh8/AXLvUQsrIv7s2CGM=}
+    engines: {node: '>=0.10.0'}
+    dev: false
+
   /object-inspect/1.12.2:
     resolution: {integrity: sha1-wGQfJjlFMvKKuNeWq5VOQ8AJqOo=}
+    dev: false
+
+  /on-finished/2.3.0:
+    resolution: {integrity: sha1-IPEzZIGwg811M3mSoWlxqi2QaUc=}
+    engines: {node: '>= 0.8'}
+    dependencies:
+      ee-first: 1.1.1
     dev: false
 
   /on-finished/2.4.1:
@@ -1043,6 +1095,11 @@ packages:
     engines: {node: '>= 0.8'}
     dependencies:
       ee-first: 1.1.1
+    dev: false
+
+  /on-headers/1.0.2:
+    resolution: {integrity: sha1-dysK5qqlJcOZ5Imt+tkMQD6zwo8=}
+    engines: {node: '>= 0.8'}
     dev: false
 
   /once/1.4.0:
@@ -1189,6 +1246,10 @@ packages:
     dependencies:
       queue-microtask: 1.2.3
     dev: true
+
+  /safe-buffer/5.1.2:
+    resolution: {integrity: sha1-mR7GnSluAxN0fVm9/St0XDX4go0=}
+    dev: false
 
   /safe-buffer/5.2.1:
     resolution: {integrity: sha1-Hq+fqb2x/dTsdfWPnNtOa3gn7sY=}
